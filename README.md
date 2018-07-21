@@ -8,7 +8,7 @@ This python3 library provides easy interface to create, sign and send to the net
 * ecdsa
 
 
-*For examples see start_bitcoin.py  file*
+**For examples see start_bitcoin.py  file**
 
 
 ### Generating new private key, public key, address
@@ -36,11 +36,12 @@ Example:
     receivers = {"1BR1TupFa6AGbnkKqihpYqyEPRfUPZnPrn": 120000, '12b7p5DrNxnTSDMURfWX1RCbbZvsoHnEVi' : 5000}
     outputs   = {"b9d934eef14574a614303b702df92572d5016e80f29796a849201b2bcc02d308" : 0,   "67f44eebe97cf72a6819274d063642453a3b530a11a61fe5fa9d3d2c32720d3b" : 1}
 
-    txn    = tx_bitcoin.getSignedTran(outputs, sender_address, private_key, receivers)
+    txn    = tx_bitcoin.getSignedTran(outputs, sender_address, private_key, receivers, False)
     txnHex = binascii.hexlify(txn).decode('ascii')
     print('Transaction hex: ', txnHex)
 
 You can see details for this address here: https://www.blockchain.com/en/btc/address/1694jeVGow1MQ6qp1kA4LA9Xi4LkKYj2aP
+
 To decode this Hex you can use https://live.blockcypher.com/btc/decodetx/
 
 Sending transaction to the network

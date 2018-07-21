@@ -1,13 +1,21 @@
-# python-bitcoin_easy
+## python-bitcoin_easy
 
-Look for examples in file start_bitcoin.py
+This python3 library provides easy interface to create, sign and send to the network bitcoin transactions. Also it demonstrates using of simple miner. It was tested on python version 3.6. 
+
+##Requirements
+* binascii
+* base58
+* ecdsa
 
 
-## Generating new private key, public key, address
+*For examples see start_bitcoin.py  file*
+
+
+### Generating new private key, public key, address
 
     generate_keys_bitcoin.generate()
 
-## Creating transaction, sign it and sending to the net
+### Creating transaction, sign it and sending to the net
 
     tx_bitcoin.getSignedTran(previous_output, output_index, sender_address, private_key,  receivers, ischeckbalance = True, fee = -1)
     
@@ -21,7 +29,7 @@ Params
                          The more fee the faster transaction will be proceed. You can try put the fee as much as zero (0), in this case transaction will be proceed with the lowest priority or may be never)
 
 
-Example
+Example:
 
     sender_address  = "1694jeVGow1MQ6qp1kA4LA9Xi4LkKYj2aP"
     private_key     = "581dda14fd1731039b2b0632d5288849daf87f010222a5757b31a82e481c3d64"
@@ -52,7 +60,7 @@ Example:
 
 
 
-#  Mining
+###  Mining
 
     miner_bitcoin.Miner(reciever, message)
 

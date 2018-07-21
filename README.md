@@ -49,7 +49,7 @@ Sending transaction to the network
     node_bitcoin.Simple_node(ip_to_connect = '')
 
 Params
-1. ip_to_connect - ip of working node in the net. You can find it for example using command "nslookup dnsseed.bluematt.me" or any oyher method. It's also possible to leave this parametr empty, in this case ip of working node  will be found automaticly
+1. ip_to_connect - ip of working node in the net. You can find it, for example, using command "nslookup dnsseed.bluematt.me" or any other method. It's also possible to leave this parameter empty, in this case ip of working node  will be found automaticaly
 
 Example:
 
@@ -65,7 +65,7 @@ Example:
 
 Params 
 1. reciever     - dict of previous outputs in format {'output':'output_index'}
-2. message      - sender address 
+2. message      - any message
 
  Example:
 

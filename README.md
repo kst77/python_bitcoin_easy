@@ -2,7 +2,7 @@
 
 This python3 library provides easy interface to create, sign and send to the network bitcoin transactions. Also it demonstrates using of simple miner. It was tested on python version 3.6. 
 
-##Requirements
+## Requirements
 * binascii
 * base58
 * ecdsa
@@ -19,7 +19,7 @@ This python3 library provides easy interface to create, sign and send to the net
 
     tx_bitcoin.getSignedTran(previous_output, output_index, sender_address, private_key,  receivers, ischeckbalance = True, fee = -1)
     
-Params 
+Params:
 1. outputs         - dict of previous outputs in format {'output':'output_index'}
 2. sender_address  - sender address 
 3. private_key     - private key for sender address
@@ -36,13 +36,11 @@ Example:
     receivers = {"1BR1TupFa6AGbnkKqihpYqyEPRfUPZnPrn": 120000, '12b7p5DrNxnTSDMURfWX1RCbbZvsoHnEVi' : 5000}
     outputs   = {"b9d934eef14574a614303b702df92572d5016e80f29796a849201b2bcc02d308" : 0,   "67f44eebe97cf72a6819274d063642453a3b530a11a61fe5fa9d3d2c32720d3b" : 1}
 
-you can see details for this address here: https://www.blockchain.com/en/btc/address/1694jeVGow1MQ6qp1kA4LA9Xi4LkKYj2aP
-
     txn    = tx_bitcoin.getSignedTran(outputs, sender_address, private_key, receivers)
     txnHex = binascii.hexlify(txn).decode('ascii')
     print('Transaction hex: ', txnHex)
 
-
+You can see details for this address here: https://www.blockchain.com/en/btc/address/1694jeVGow1MQ6qp1kA4LA9Xi4LkKYj2aP
 To decode this Hex you can use https://live.blockcypher.com/btc/decodetx/
 
 Sending transaction to the network

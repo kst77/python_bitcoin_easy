@@ -42,6 +42,8 @@ outputs   = {"b9d934eef14574a614303b702df92572d5016e80f29796a849201b2bcc02d308" 
 # you can see details for this address here: https://www.blockchain.com/en/btc/address/1694jeVGow1MQ6qp1kA4LA9Xi4LkKYj2aP
 
 txn    = tx_bitcoin.getSignedTran(outputs, sender_address, private_key, receivers)
+#txn    = tx_bitcoin.getSignedTran(outputs, sender_address, private_key, receivers, False)
+#txn    = tx_bitcoin.getSignedTran(outputs, sender_address, private_key, receivers, False, 4000)
 txnHex = binascii.hexlify(txn).decode('ascii')
 print('Transaction hex: ', txnHex)
 # To decode this Hex you can use https://live.blockcypher.com/btc/decodetx/
@@ -61,9 +63,9 @@ def on_get_socket_data(sock_data):
 #node_bitcoin.Simple_node(ip_to_connect = '')
 
 # Params
-# ip_to_connect - ip of working node in the net. You can find it for example using command "nslookup dnsseed.bluematt.me" or any oyher method
+# ip_to_connect - ip of working node in the net. You can find it for example using command "nslookup dnsseed.bluematt.me" or any other method
 #
-#                 It's also possible to leave this parametr empty, in this case ip of working node  will be found automaticly
+#                 It's also possible to leave this parameter empty, in this case ip of working node  will be found automaticaly
 
 
 #simple_node = node_bitcoin.Simple_node('84.35.69.10')
@@ -90,7 +92,7 @@ simple_node.send_transaction(txn)
 #
 # Params 
 #    1. reciever     - dict of previous outputs in format {'output':'output_index'}
-#    2. message      - sender address 
+#    2. message      - any message
 #
 # Example:
 

@@ -3,11 +3,11 @@
 Look for examples in file start_bitcoin.py
 
 
-# Generating new private key, public key, address
+## Generating new private key, public key, address
 
     generate_keys_bitcoin.generate()
 
-# Creating transaction, sign it and sending to the net
+## Creating transaction, sign it and sending to the net
 
     tx_bitcoin.getSignedTran(previous_output, output_index, sender_address, private_key,  receivers, ischeckbalance = True, fee = -1)
     
@@ -42,14 +42,13 @@ Sending transaction to the network
     node_bitcoin.Simple_node(ip_to_connect = '')
 
 Params
-ip_to_connect - ip of working node in the net. You can find it for example using command "nslookup dnsseed.bluematt.me" or any oyher method. It's also possible to leave this parametr empty, in this case ip of working node  will be found automaticly
+1. ip_to_connect - ip of working node in the net. You can find it for example using command "nslookup dnsseed.bluematt.me" or any oyher method. It's also possible to leave this parametr empty, in this case ip of working node  will be found automaticly
 
 Example:
 
-simple_node = node_bitcoin.Simple_node('84.35.69.10')
-simple_node = node_bitcoin.Simple_node()
-
-simple_node.send_transaction(txn)
+    simple_node = node_bitcoin.Simple_node('84.35.69.10')
+    simple_node = node_bitcoin.Simple_node()
+    simple_node.send_transaction(txn)
 
 
 
